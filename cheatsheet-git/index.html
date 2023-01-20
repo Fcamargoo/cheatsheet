@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<div class="container">
+
+    <h1 class="heading">Git Cheat Sheet</h1>
+    <p>Git é o sistema de controle de versão distribuído gratuito e de código aberto responsável por tudo o que o GitHub
+        relacionado que acontece localmente no seu computador. Esta folha de dicas apresenta as informações mais importantes e comumente
+        usei comandos do Git para fácil referência.</p>
+<br>
+<div class="align-box">
+    <h2>INSTALAÇÃO E GUIS</h2>
+    <p>
+      Com instaladores específicos da plataforma para o Git, o GitHub também fornece o
+      facilidade de manter-se atualizado com as últimas versões do comando
+      ferramenta de linha enquanto fornece uma interface gráfica do usuário para o dia-a-dia
+      interação, revisão e sincronização do repositório.
+    </p>
+    <br>
+    <strong>GitHub para Windows</strong><br>
+    <a href="htps://windows.github.com">htps://windows.github.com</a><br>
+    <br>
+    <strong>GitHub para Mac</strong>
+    <br>
+    <a href="
+    htps://mac.github.com">
+    htps://mac.github.com
+    </a>
+    <br>
+    <br>
+    <strong>Para plataformas Linux e Solaris, a versão mais recente está disponível em
+    o site oficial do Git.</strong>
+    <br>
+    <br>
+    <strong>Git para todas as plataformas</strong><br>
+    <a href="htp://git-scm.com
+    ">htp://git-scm.com
+</a>
+</div>
+<br>
+<br>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>STAGE & SNAPSHOT</h3>
+            <p>
+                Trabalhando com snapshot e a área de preparo do Git                <br>
+                <p>-------------------------------</p>
+                <strong>git status</strong></br>
+    mostre arquivos modificados no diretório de trabalho, preparados para seu próximo commit
+    </br>
+    </br>
+    <strong>git add [file]</strong></br>
+    adicione um arquivo como ele se parece agora ao seu próximo commit (estágio)
+    </br>
+    </br>
+    <strong>git reset [file]</strong></br>
+    remover o estágio de um arquivo enquanto retém as alterações no diretório de trabalho
+    </br>
+    </br>
+    <strong>git diff</strong><br>
+    diff do que foi alterado, mas não encenado
+    <br>
+    </br>
+    <strong>git diff --staged</strong><br>
+    diff do que está preparado, mas ainda não commitado
+    <br>
+    </br>
+    <strong>git commit -m “[descriptive message]”</strong><br>
+    confirme seu conteúdo preparado como um novo commit com descrição sobre a tarefa<br></p>
+        </div>
+
+        <div class="box">
+            <h3>SETUP</h3>
+            <p>
+                Configurando as informações do usuário usadas em todos os repositórios locais
+                <br>
+                <p>-------------------------------</p>
+                <strong>git config --global user.name “[firstname lastname]”</strong>
+                defina um nome que seja identificável para crédito ao revisar o histórico da versão
+                <br>
+                </br>
+                <strong>git config --global user.email “[valid-email]”</strong><br>
+                defina um endereço de e-mail que será associado a cada marcador de histórico
+                <br>
+                </br>
+                <strong>git config --global color.ui auto</strong><br>
+                defina a coloração automática da linha de comando para o Git para facilitar a revisão
+                <br></p>
+        </div>
+
+        <div class="box">
+            <h3>BRANCH & MERGE</h3>
+            <p>
+                Isolando o trabalho nas ramificações, alterando o contexto e integrando as alterações</summary>
+                <br>
+                <p>-------------------------------</p>
+                <strong>git branch</strong><br>
+                liste seus ramos. um * aparecerá ao lado do ramo atualmente ativo
+                <br>
+                <br>
+                <strong>git branch [branch-name]</strong><br>
+                criar uma nova ramificação no commit atual
+                <br>
+                <br>
+                <strong>git checkout</strong><br>
+                mude para outro ramo e verifique-o em seu diretório de trabalho
+                <br>
+                <br>
+                <strong>git merge [branch]</strong><br>
+                mesclar o histórico da ramificação especificada com o atual
+                <br>
+                <br>
+                <strong>git log</strong><br>
+                mostra todos os commits no histórico do branch atual</p>
+        </div>
+
+        <div class="box">
+            <h3>SETUP & INIT</h3>
+            <p>Configurar informações do usuário, inicializar e clonar repositórios
+                <br>
+                <p>-------------------------------</p>
+                <strong>git init</strong><br>
+                inicializar um diretório existente como um repositório Git
+                <br>
+                <br>
+                <strong>git clone [url]</strong><br>
+                recuperar um repositório inteiro de um local hospedado via URL
+                <br></p>
+        </div>
+
+        <div class="box">
+            <h3>INSPECT & COMPARE</h3>
+            <p>
+                Examinando logs, diffs e informações de objetos
+                <br>
+                <p>-------------------------------</p>
+                <strong>git log</strong><br>
+                mostra o histórico de commits para o branch atualmente ativo
+                <br>
+                <br>
+                <strong>git log branchB..branchA</strong><br>
+                mostre os commits no branchA que não estão no branchB
+                <br>
+                <br>
+                <strong>git log --follow [arquivo]</strong><br>
+                mostre os commits que alteraram o arquivo, mesmo entre renomeações
+                <br>
+                <br>
+                <strong>git diff branchB...branchA</strong><br>
+                mostre a diferença do que está na branchA que não está na branchB
+                <br>
+                <br>
+                <strong>git show [SHA]</strong><br>
+                mostre qualquer objeto no Git em formato legível por humanos
+            </p>
+        </div>
+
+        <div class="box">
+            <h3>RASTREANDO MUDANÇAS DE PATH</h3>
+            <p>
+                Remoções de arquivo de controle de versão e alterações de caminho
+                <br>
+                <p>-------------------------------</p>
+                <strong>git rm [file]</strong><br>
+                exclua o arquivo do projeto e prepare a remoção para confirmação
+                <br>
+                <br>
+                <strong>git mv [existing-path] [new-path]</strong><br>
+                alterar um caminho de arquivo existente e preparar a mudança
+                <br>
+                <br>
+                <strong>git log --stat -M</strong><br>
+                mostre todos os logs de confirmação com indicação de todos os caminhos que foram movidos
+                <br></p>
+        </div>
+
+        <div class="box">
+            <h3>SHARE & UPDATE</h3>
+            <p>Recuperando atualizações de outro repositório e atualizando repositórios locais
+                <br>
+                <p>-------------------------------</p>
+                <strong>git remote add [alias] [url]</strong><br>
+                adicione um URL git como um alias
+                <br>
+                <br>
+                <strong>git fetch [alias]</strong><br>
+                buscar todas as ramificações desse controle remoto do Git
+                <br>
+                <br>
+                <strong>git merge [alias]/[branch]</strong><br>
+                mesclar uma ramificação remota em sua ramificação atual para atualizá-la
+                <br>
+                <br>
+                <strong>git push [alias] [branch]</strong><br>
+                Transmitir commits da ramificação local para a ramificação do repositório remoto
+                <br>
+                <br>
+                <strong>git pull</strong><br>
+                buscar e mesclar quaisquer commits da ramificação remota de rastreamento
+                <br></p>
+        </div>
+
+        <div class="box">
+            <h3>REESCREVER O HISTÓRIICO</h3>
+            <p>Reescrevendo branches, atualizando commits e limpando o histórico
+                <br>
+                <p>-------------------------------</p>
+                <strong>git rebase [branch]</strong><br>
+                aplicar quaisquer commits do branch atual antes do especificado
+                <br>
+                <br>
+                <strong>git reset --hard [commit]</strong><br>
+                limpar a área de preparação, reescrever a árvore de trabalho do commit especificado
+                <br></p>
+        </div>
+
+        <div class="box">
+            <h3>COMMITS TEMPORÁRIOS</h3>
+            <p>Armazene temporariamente arquivos rastreados e modificados para alterar as ramificações
+                <br>
+                <p>-------------------------------</p>
+                <strong>git stash</strong><br>
+                Salvar alterações modificadas e preparadas
+                <br>
+                <br>
+                <strong>git stash list</strong><br>
+                listar a ordem da pilha de alterações de arquivos armazenados
+                <br>
+                <br>
+                <strong>git stash pop</strong><br>
+                escrever trabalhando do topo da pilha de stash
+                <br>
+                <br>
+                <strong>git stash drop</strong><br>
+                descarte as alterações do topo da pilha de stash<br></p>
+        </div>
+
+        <div class="box">
+            <h3>IGNORAR PADRÕES</h3>
+            <p>Evitando a preparação ou confirmação não intencional de arquivos
+                <br>
+                <p>-------------------------------</p>
+                <strong>logs/
+                    *.notes
+                    pattern*/</strong><br>
+                Salve um arquivo com os padrões desejados como .gitignore com uma string direta
+                correspondências ou globs curinga.
+                <br>
+                <br>
+                <strong>git config --global core.excludesfile [file]</strong><br>
+                padrão de ignorar em todo o sistema para todos os repositórios locais
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
